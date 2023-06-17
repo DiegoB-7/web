@@ -1,7 +1,10 @@
 <script>
 	import Atropos from 'atropos';
 	import { onMount } from 'svelte';
+	
+	import img from '$lib/images/cristiano.png';
 	import { goto } from '$app/navigation';
+	
 
 	onMount(() => {
 		const myAtropos = Atropos({
@@ -29,7 +32,7 @@
                         <div class="atropos-scale">
                             <div class="atropos-rotate">
                                 <div class="atropos-inner">
-                                    <img src="/images/cristiano.png" alt="profile" data-atropos-offset="5" />
+                                    <img src={img} alt="profile" data-atropos-offset="5" />
                                 </div>
                             </div>
                         </div>
@@ -51,7 +54,9 @@
                     <p class="text-lightgray font-heebo">Te ardes mucho</p>
                 </div>
 				<div class="my-1">
-					<button class="bg-red rounded-sm text-white hover:bg-gray delay-150 py-2 px-6 font-heebo" on:click={goAbout}>About me</button>
+					<button class="bg-red rounded-sm text-white hover:bg-gray delay-150 py-2 px-6 font-heebo" on:click={goAbout}>
+						About me
+					</button>
 				</div>
 			</div>
 		</div>
