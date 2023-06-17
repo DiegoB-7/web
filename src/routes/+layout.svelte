@@ -5,7 +5,9 @@
     import Header from "./components/Header.svelte";
     
 </script>
-
+<svelte:head>
+    <title>Diego's Portfolio</title> 
+</svelte:head>
 <Header/>
 <slot/>
 <Footer/>

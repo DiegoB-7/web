@@ -1,9 +1,10 @@
 <script>
 	import { goto } from '$app/navigation';
-	import viewport from '../js/useViewportAction.js';
-
+	import { onMount } from 'svelte';
 	
-    
+	let isVisible = false;
+  	let element;
+
 	function goHome() {
 		goto('/');
 	}
@@ -30,11 +31,23 @@
         element.classList.remove('animate__animated');
         element.classList.remove('animate__bounceInLeft');
     }
-   
+	function handleIntersection(entries) {
+    entries.forEach(entry => {
+      isVisible = entry.isIntersecting;
+	  console.log(isVisible);
+    });
+  }
+  
+  onMount(() => {
+    const observer = new IntersectionObserver(handleIntersection);
+    observer.observe(element);
+  });
 </script>
 
-<footer class="bg-gray  bottom-0 w-full h-full footer" style="overflow: hidden" use:viewport on:enterViewport={onShow} on:exitViewport={onExit}>
-	<div class="relative">
+
+
+<footer class="bg-gray  bottom-0 w-full h-full footer" style="overflow: hidden" bind:this={element} class:fade-in="{isVisible}">
+	<div class="relative" >
 		<div class="flex justify-center my-3 ">
 			<button on:click={goHome}  >
 				<p class="text-white hover:text-lightgray hover:delay-150 mx-3   font-heebo links" >
@@ -51,6 +64,8 @@
 					Contact
 				</p></button
 			>
+			
+
 		</div>
 		<div class="flex justify-between flex-row mx-10 my-5">
 			<div class="basis-1/3">
@@ -115,3 +130,11 @@
 		</div>
 	</div>
 </footer>
+<style>
+	.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  
+  
+  </style>
