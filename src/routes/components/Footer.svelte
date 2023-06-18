@@ -31,6 +31,7 @@
         element.classList.remove('animate__animated');
         element.classList.remove('animate__bounceInLeft');
     }
+
 	function handleIntersection(entries) {
     entries.forEach(entry => {
       isVisible = entry.isIntersecting;
@@ -38,7 +39,6 @@
 	  
 	  if(isVisible){
 		onShow();
-	  	
 	  }
 	  else {
 		onExit();
@@ -139,11 +139,3 @@
 		</div>
 	</div>
 </footer>
-<style>
-	.fade-in {
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
-  }
-  
-  
-  </style>
