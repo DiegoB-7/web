@@ -20,11 +20,11 @@
 	function goTwitter() {
 		window.open('https://twitter.com/DiegoBe42690391', '_blank');
 	}
-    function onShow(){
+    async function onShow(){
         const element = document.querySelector('.footer');
         element.classList.add('animate__animated');
         element.classList.add('animate__bounceInLeft');
-        element.style.setProperty('--animate-duration', '0.5s');
+        await element.style.setProperty('--animate-duration', '0.5s');
     }
     function onExit(){
         const element = document.querySelector('.footer');
@@ -35,6 +35,15 @@
     entries.forEach(entry => {
       isVisible = entry.isIntersecting;
 	  console.log(isVisible);
+	  
+	  if(isVisible){
+		onShow();
+	  	
+	  }
+	  else {
+		onExit();
+	  }
+
     });
   }
   
@@ -46,7 +55,7 @@
 
 
 
-<footer class="bg-gray  bottom-0 w-full h-full footer" style="overflow: hidden" bind:this={element} class:fade-in="{isVisible}">
+<footer class="bg-gray  bottom-0 w-full h-full footer" style="overflow: hidden" bind:this={element} >
 	<div class="relative" >
 		<div class="flex justify-center my-3 ">
 			<button on:click={goHome}  >
