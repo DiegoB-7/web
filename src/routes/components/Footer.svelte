@@ -4,6 +4,8 @@
 	
 	let isVisible = false;
   	let element;
+	let isScrolling = false;
+	let timeout = null;
 
 	function goHome() {
 		goto('/');
@@ -32,19 +34,23 @@
         element.classList.remove('animate__bounceInLeft');
     }
 
-	function handleIntersection(entries) {
-    entries.forEach(entry => {
-      isVisible = entry.isIntersecting;
-	  console.log(isVisible);
-	  
-	  if(isVisible){
-		onShow();
-	  }
-	  else {
-		onExit();
-	  }
+	function debounce(func, delay) {
+  		clearTimeout(timeout);
+  		timeout = setTimeout(func, delay);
+	}
 
-    });
+	function handleIntersection(entries) {
+   entries.forEach(entry => {
+  isVisible = entry.isIntersecting;
+  
+  debounce(() => {
+    if (isVisible) {
+      onShow();
+    } else {
+      onExit();
+    }
+  }, 150); // Adjust the debounce delay (in milliseconds) to fit your needs
+});
   }
   
   onMount(() => {
