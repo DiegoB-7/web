@@ -4,8 +4,7 @@
 	
 	let isVisible = false;
   	let element;
-	let isScrolling = false;
-	let timeout = null;
+	
 
 	function goHome() {
 		goto('/');
@@ -22,11 +21,17 @@
 	function goTwitter() {
 		window.open('https://twitter.com/DiegoBe42690391', '_blank');
 	}
-    async function onShow(){
+	
+
+     function onShow(){
         const element = document.querySelector('.footer');
         element.classList.add('animate__animated');
         element.classList.add('animate__bounceInLeft');
-        await element.style.setProperty('--animate-duration', '0.5s');
+        element.style.setProperty('--animate-duration', '0.5s');
+		setTimeout(() => {
+			onExit();
+		}, 1000);
+		
     }
     function onExit(){
         const element = document.querySelector('.footer');
@@ -34,23 +39,17 @@
         element.classList.remove('animate__bounceInLeft');
     }
 
-	function debounce(func, delay) {
-  		clearTimeout(timeout);
-  		timeout = setTimeout(func, delay);
-	}
-
 	function handleIntersection(entries) {
-   entries.forEach(entry => {
-  isVisible = entry.isIntersecting;
-  
-  debounce(() => {
-    if (isVisible) {
-      onShow();
-    } else {
-      onExit();
-    }
-  }, 150); // Adjust the debounce delay (in milliseconds) to fit your needs
-});
+   		entries.forEach(entry => {
+  			isVisible = entry.isIntersecting;
+			console.log(isVisible);
+  			if (isVisible) {
+    		  onShow();
+			  
+    		}
+			
+			
+		});
   }
   
   onMount(() => {
