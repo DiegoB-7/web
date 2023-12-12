@@ -53,9 +53,10 @@
     }
 </script>
 
-<header class="top-0 w-full header relative" style="overflow: hidden" bind:this={element} >
+<header class="top-0 w-full header relative mb-10" style="overflow: hidden" bind:this={element} >
     <div class="flex flex-col md:flex-row mx-10 md:mx-0 ">
-        <div class="flex justify-between items-center md:mx-40">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <div class="flex justify-between items-center md:mx-40 cursor-pointer" >
             <img src={img} alt="logo" class="w-24 h-24 object-cover">
             <button on:click={toggleMenu} class="md:hidden flex items-center px-3 py-2 border rounded text-white border-white hover:text-lightgray hover:border-lightgray">
 				<svg class="h-4 w-4 fill-current text-white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -68,10 +69,10 @@
 				<p class="text-white hover:text-lightgray hover:delay-150 mx-3 font-heebo links">Home</p>
 			</button>
 			<button on:click={goAbout}>
-				<p class="text-white hover:text-lightgray hover:delay-150 mx-3 font-heebo">About</p>
+				<p class="text-white hover:text-lightgray hover:delay-150 mx-3 font-heebo">About Me</p>
 			</button>
 			<button on:click={goContact}>
-				<p class="text-white hover:text-lightgray hover:delay-150 mx-3 font-heebo">Contact</p>
+				<p class="text-white hover:text-lightgray hover:delay-150 mx-3 font-heebo">Contact Me</p>
 			</button>
 		</div>
     </div>

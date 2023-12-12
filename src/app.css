@@ -9,4 +9,9 @@
     height: 0px;
 }
 
+.swiper-pagination-bullet-active {
+    color: red;
+    background: red;
+  }
+
 

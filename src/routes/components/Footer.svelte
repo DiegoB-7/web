@@ -64,7 +64,7 @@
 
 
 
-<footer class="bg-gray  bottom-0 w-full h-full footer" style="overflow: hidden" bind:this={element} >
+<footer class="bg-gray  bottom-0 w-full h-full footer mt-10" style="overflow: hidden" bind:this={element} >
 	<div class="relative" >
 		
 		<div class="flex flex-col md:flex-row mx-10 ">
