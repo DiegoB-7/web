@@ -9,7 +9,18 @@
 	var descriptionModal ="";
 	var imagesModal =[];
 	const modalData =[
-		{"title":"Youtube 2","images":[{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"},{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"},{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"}],"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum!","link":"https://www.youtube.com/" },
+		{"title":"Next ERP","images":[
+			{"src":"/images/nexterp/login.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/register.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/forgotpasswordpage.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/forgotpasswordsuccess.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/homepage.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/componentspage.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/detailscomponentspage.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/modalcomponentspage.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/settingspage.png" ,"alt":"The Vintage"},
+			{"src":"/images/nexterp/settingsdetailspage.png" ,"alt":"The Vintage"},
+		],"description":"A web application that used to manage a blind bussines","link":"https://www.youtube.com/" },
 		{"title":" 2","images":[{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"},{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"},{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"}],"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum!","link":"https://www.youtube.com/" },
 		{"title":"222 2","images":[{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"},{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"},{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"}],"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum!","link":"https://www.youtube.com/" },
 		{"title":"334234 2","images":[{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"},{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"},{"src":"https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg","alt":"The Vintage"}],"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum!","link":"https://www.youtube.com/" }
@@ -201,20 +212,20 @@
 		<div class="w-2/3 flex justify-center">
 			<div class="grid lg:grid-cols-2 gap-4 grid-cols-1 w-full">
 				<div class="rounded overflow-hidden bg-gray mx-2 my-4 md:my-0 py-10  ">
-					<h1 class="text-red text-5xl text-center font-heebo">2 </h1>
-					<h4 class="text-center text-lightgray text-3xl font-heebo">Clients</h4>
+					<h1 class="text-red text-5xl text-center font-heebo">1</h1>
+					<h4 class="text-center text-lightgray text-3xl font-heebo">Client</h4>
 				</div>
 				<div class="rounded overflow-hidden bg-gray mx-2 my-4 md:my-0 py-10  ">
-					<h1 class="text-red text-5xl text-center font-heebo">3 </h1>
+					<h1 class="text-red text-5xl text-center font-heebo">3</h1>
 					<h4 class="text-center text-lightgray text-3xl font-heebo">Projects</h4>
 				</div>
 				<div class="rounded overflow-hidden bg-gray mx-2 my-4 md:my-0 py-10  ">
-					<h1 class="text-red text-5xl text-center font-heebo">1 </h1>
-					<h4 class="text-center text-lightgray text-3xl font-heebo">Awards</h4>
+					<h1 class="text-red text-5xl text-center font-heebo">1</h1>
+					<h4 class="text-center text-lightgray text-3xl font-heebo">Award</h4>
 				</div>
 				<div class="rounded overflow-hidden bg-gray mx-2 my-4 md:my-0 py-10  ">
-					<h1 class="text-red text-5xl text-center font-heebo">1 </h1>
-					<h4 class="text-center text-lightgray text-3xl font-heebo">Certification</h4>
+					<h1 class="text-red text-5xl text-center font-heebo">5</h1>
+					<h4 class="text-center text-lightgray text-3xl font-heebo">Certifications</h4>
 				</div>
 				
 			</div>
@@ -231,17 +242,17 @@
 			<div class="  w-7/12  shadow-sm 	" >
 				<div class="py-10 px-5 bg-gray rounded-md">
 				  <img
-					src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+					src="/images/nexterp/homepage.png"
 					alt="Mozaik"
-					class="w-full h-auto aspect-video py-2"
+					class="w-full h-auto mx-3 aspect-video ml-0 py-2"
 					
-					style="aspect-ratio:350/200;object-fit:cover"
+					
 				  />
 				  
 				</div>
 				
 				<div >
-					<h3 class="font-bold text-xl font-heebo text-white mt-3">Mozaik</h3>
+					<h3 class="font-bold text-xl font-heebo text-white mt-3">Next ERP</h3>
 					<button class="text-red font-bold font-heebo py-0 inline-flex items-center justify-start" on:click={()=>{openModal(0)}}>
 						Know More
 					</button>
@@ -330,7 +341,7 @@
 </main>
 
 <dialog  id="modal" class="fixed left-0 top-0  h-full w-full items-center justify-center bg-black bg-opacity-50 py-10 " in:blur out:blur>
-	<div class="max-h-full w-full max-w-xl overflow-y-auto sm:rounded-2xl bg-gray">
+	<div class="max-h-full w-full max-w-4xl overflow-y-auto sm:rounded-2xl bg-gray">
 		<div class="w-full">
 		  <div class=" my-10 mx-10 ">
 			<div class="mb-8">
@@ -340,12 +351,12 @@
 			<div class="mb-8 ">
 				<div class="swiper">
 					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
+					<div class="swiper-wrapper ">
 					  <!-- Slides -->
 					  	
 						{#each imagesModal as image}
 							<div class="swiper-slide">
-								<img src={image.src} alt={image.alt} class="w-full h-full object-cover rounded-md" style="aspect-ratio: 300 / 200; object-fit: cover;">
+								<img src={image.src} alt={image.alt} class="w-full h-full  rounded-md" >
 							</div>
 						{/each}
 					  
