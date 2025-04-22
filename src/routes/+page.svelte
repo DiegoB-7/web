@@ -4,7 +4,7 @@
 	import { blur } from 'svelte/transition';
 	import img from '$lib/images/cristiano.png';
 	import { goto } from '$app/navigation';
-	import ProfilePicture from '$lib/images/profile-picture.png';
+	import ProfilePicture from '$lib/images/profile-picture.jpg';
 	var titleModal ="";
 	var descriptionModal ="";
 	var imagesModal =[];
