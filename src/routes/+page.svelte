@@ -4,7 +4,7 @@
 	import { blur } from 'svelte/transition';
 	import img from '$lib/images/cristiano.png';
 	import { goto } from '$app/navigation';
-
+	import ProfilePicture from '$lib/images/profile-picture.png';
 	var titleModal ="";
 	var descriptionModal ="";
 	var imagesModal =[];
@@ -90,7 +90,7 @@
 						<div class="atropos-scale">
 							<div class="atropos-rotate">
 								<div class="atropos-inner inline-flex justify-center">
-									<img src="https://scontent.ftij3-2.fna.fbcdn.net/v/t39.30808-6/311693255_2099624763574076_8587080800396754404_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=btic1U8eT4sAX_eCpvY&_nc_ht=scontent.ftij3-2.fna&oh=00_AfDJVty7hNcRDvTMHCMMFa-qcMlrU49x103HJUgPETzcmg&oe=657CF07E" alt="profile" data-atropos-offset="5" class="w-1/2 rounded-lg"/>
+									<img src={ProfilePicture} alt="profile" data-atropos-offset="5" class="w-1/2 rounded-lg"/>
 								</div>
 							</div>
 						</div>
