@@ -1,5 +1,6 @@
 <script>
-function goLinkedIn() {
+	import ProfilePicture from '$lib/images/profile-picture.jpg';
+	function goLinkedIn() {
 		window.open('https://www.linkedin.com/in/diego-beltran-lopez-283a0b216/', '_blank');
 	}
 </script>
@@ -18,7 +19,7 @@ function goLinkedIn() {
                     <img
                       class="aspect-square h-full w-full"
                       alt="Profile Picture"
-                      src="https://scontent.ftij3-2.fna.fbcdn.net/v/t39.30808-6/311693255_2099624763574076_8587080800396754404_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=btic1U8eT4sAX_eCpvY&_nc_ht=scontent.ftij3-2.fna&oh=00_AfDJVty7hNcRDvTMHCMMFa-qcMlrU49x103HJUgPETzcmg&oe=657CF07E"
+                      src={ProfilePicture}
                     />
                   </span>
                   <h3 class="text-lg font-bold text-center mb-2 font-heebo text-white">Diego Beltrán López</h3>
